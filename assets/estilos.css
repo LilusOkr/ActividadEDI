@@ -1,0 +1,100 @@
+ 
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: Helvetica,Arial, Helvetica, sans-serif;/*Es la tipografia mas utilizada para tener una mejor lectura*/
+    line-height: 1.6;
+    letter-spacing: 1.2px;/*Espaciado entre cada letra, le da aire a la lectura*/
+}
+/* Variables desde aca cambiamos cualquier valor e impacta en la pagina*/
+:root {
+    --primario: rgb(57, 93, 214);
+    --secundario: rgb(125, 116, 240);
+	--border: rgb(204, 204, 204);
+    --Success: rgb(16, 189, 53);
+    --dark: rgb(0, 0, 0);
+    --radius:  0.4rem;
+} 
+
+.header{
+    display: flex;/* display flexible*/
+    justify-content: space-evenly;/* le un espaciado a cada H*/
+    padding-top: 20px;
+    padding-bottom: 20px;/* padding a la parte inferior (padding del contenedor hacia adentro)*/
+    background-color:  var(--primario);
+    color: #fff;    
+    align-items: center;/*alinea en forma vertical al todos ser H diferentes tienen diferentes padding*/
+    margin-bottom: 80px;/* margin del contenedor hacia afuera*/
+}
+.table{
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 27%);
+    margin: auto;
+}
+.titulo{
+    display: flex;
+    justify-content: end;/* Alinea al final del contenedor*/
+    margin-top: 10px;
+}
+.right{
+    background-color: var(--secundario);
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+}
+.title{
+    text-align: center;
+    margin-top: 30px;     
+}
+.listas{ 
+    margin: 30px auto;/* El primer parametro son arriba y abajo y el segundo que dice auto es en el eje horizontal*/
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 27%); /* parece que la imagen tiene un relieve y sobresale de la pantalla*/
+    width: 70vw;    
+    padding: 20px;
+}
+.listas label{
+    bottom: 20px;
+}
+.btn{   /* estilos al boton*/
+    height: calc(1.5em + .75rem + 2px);
+    padding: 0 .75rem;
+    font-size: 1rem; /* tamaño de tipografia*/
+    font-weight: 400; /* Le da lo que conocemos con negrita cuanto mas sea el valor mas peso va a tener*/
+    line-height: 1.5;
+    color: var(--dark);
+    background-color: var(--Success);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);/* bordes con esquinas redondeadas*/
+    margin: 0;
+    cursor: pointer;/*Al poner el cursor arriba lo convierte en una mano*/
+    text-transform: uppercase;/* pone las letras en mayusculas*/
+}
+.btn:hover{
+    opacity: 0.7;/* Al poner el cursor arriba del boton hace un efecto de opacidad */
+}
+.contenedor-bnt{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.lista-margin{
+    margin: 30px auto;
+    background-color: var(--primario);
+}
+ 
+ol{
+    background-color: var(--primario); 
+}
+.lista-a{
+    background-color: var(--secundario);
+    padding: 10px;
+    margin: 10px;  
+    border-radius: var(--radius); 
+}
+/* Responsive */
+@media only screen and (max-device-width: 700px){    /* cuando el dispositivo sea menor a 700px*/
+    .header{
+        flex-direction: column;       /*muestra el header en formato de columna y anteriormente estaba en row que es horizontal*/ 
+    }
+}
+ 
