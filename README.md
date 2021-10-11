@@ -1,2 +1,3 @@
 # ActividadEDI
-HTML usando tablas y listas
+HTML usando tablas, listas y formulario.
+CSS añadiendo estilo a lo anteriormente planteado.
